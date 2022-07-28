@@ -18,7 +18,9 @@ const errorHandler = require('./_helpers/error-handler');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://fitnesstracking.netlify.app'
+  origin: 'https://fitnesstracking.netlify.app',
+  credentials:true,
+  optionSuccessStatus:200
 }));
 app.use(jwt());
 
